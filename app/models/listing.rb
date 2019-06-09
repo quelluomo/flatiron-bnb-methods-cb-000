@@ -12,7 +12,7 @@ class Listing < ActiveRecord::Base
   validates :price, presence: true
   validates :neighborhood_id, presence: true
 
-  before_create :become_host
+  before_save :become_host
   before_destroy :end_host
 
   def average_review_rating
