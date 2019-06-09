@@ -21,18 +21,16 @@ module Helpers
     end
   end
 
-
-
-    def highest_ratio_reservations_to_listings
-      all.max do |a, b|
-        a.ratio_reservations_to_listings <=> b.ratio_reservations_to_listings
-      end
+  def highest_ratio_reservations_to_listings
+    all.max do |a, b|
+      a.ratio_reservations_to_listings <=> b.ratio_reservations_to_listings
     end
+  end
 
-    def most_reservations
-      all.max do |a, b|
-        a.reservations.count <=> b.reservations.count
-      end
+  def most_reservations
+    all.max do |a, b|
+      a.reservations.count <=> b.reservations.count
     end
+  end
   end
 end
