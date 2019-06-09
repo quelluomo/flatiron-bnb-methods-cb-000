@@ -14,7 +14,6 @@ module Helpers
   class_methods do
 
     def highest_ratio_reservations_to_listings
-
       all.max do |a, b|
         a.ratio_reservations_to_listings <=> b.ratio_reservations_to_listings
       end
