@@ -1,5 +1,5 @@
 module Helpers
-  extend ActiveSupport::Concern
+  module InstanceMethods
 
   def openings(start_date, end_date)
     openings = []
