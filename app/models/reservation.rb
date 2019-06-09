@@ -38,5 +38,4 @@ class Reservation < ActiveRecord::Base
       end
     end
 end
-
-end
+© 2019 GitHub, Inc.
