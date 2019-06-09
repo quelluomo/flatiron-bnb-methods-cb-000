@@ -23,7 +23,7 @@ class Reservation < ActiveRecord::Base
 
 
   def checkin_before_checkout
-    if checkin && checkout && checkin >= checkout
+    if check_out && check_in && check_out <= check_in
      errors.add(:guest_id, "Your check-in date must be before your check-out.")
    end
  end
