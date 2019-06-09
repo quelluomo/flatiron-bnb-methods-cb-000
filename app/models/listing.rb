@@ -24,4 +24,8 @@ class Listing < ActiveRecord::Base
    ratings.sum.to_f / ratings.size
  end
 
+ def become_host
+  self.host.update(host: true)
+ end
+
 end
