@@ -15,7 +15,7 @@ class Reservation < ActiveRecord::Base
   end
 
   private
-  def guest_and_host_not_same_user
+  def guest_no_host
     if guest_id == listing.host_id
       errors.add(:guest_id, "You cannot make a reservation on your own listing.")
     end
