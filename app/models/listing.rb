@@ -12,4 +12,10 @@ class Listing < ActiveRecord::Base
   validates :price, presence: true
   validates :neighborhood_id, presence: true
 
+
+
+  def average_review_rating
+    reviews.average(:rating)
+  end
+
 end
