@@ -13,13 +13,15 @@ module Helpers
     end
   end
 
+  module ClassMethods
+
   def ratio_reservations_to_listings
     if listings.count > 0
       reservations.count.to_f / listings.count.to_f
     end
   end
 
-  module ClassMethods
+
 
     def highest_ratio_reservations_to_listings
       all.max do |a, b|
