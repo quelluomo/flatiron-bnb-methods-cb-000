@@ -20,7 +20,6 @@ class Listing < ActiveRecord::Base
    self.reservations.each do |r|
      ratings << r.review.rating
    end
-
    ratings.sum.to_f / ratings.size
  end
 
