@@ -20,7 +20,7 @@ class Listing < ActiveRecord::Base
      ratings << r.review.rating
    end
 
-   ratings.sum.to_f / ratings.count
+   ratings.sum.to_f / ratings.size
  end
 
 end
