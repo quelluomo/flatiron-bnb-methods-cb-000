@@ -19,7 +19,7 @@ module Helpers
     end
   end
 
-  class_methods do
+  module ClassMethods
 
     def highest_ratio_reservations_to_listings
       all.max do |a, b|
