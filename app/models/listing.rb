@@ -27,4 +27,10 @@ class Listing < ActiveRecord::Base
   self.host.update(host: true)
  end
 
+ def end_host
+   if self.host.listings.count <= 1
+     host.update(host: false)
+   end
+ end
+
 end
