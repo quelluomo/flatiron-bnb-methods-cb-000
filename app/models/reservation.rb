@@ -4,7 +4,7 @@ class Reservation < ActiveRecord::Base
   has_one :review
 
   validates_presence_of :checkin, :checkout
-  validate :guest_and_host_not_same_user, :checkin_before_checkout, :availability
+  validate :guest_not_host, :chkin_b4_chkout, :availability
 
   def duration
     (checkout - checkin).to_i
@@ -22,7 +22,7 @@ class Reservation < ActiveRecord::Base
   end
 
 
-  def checkin_before_checkout
+  def :chkin_b4_chkout
     if check_out && check_in && check_out <= check_in
      errors.add(:guest_id, "Your check-in date must be before your check-out.")
    end
