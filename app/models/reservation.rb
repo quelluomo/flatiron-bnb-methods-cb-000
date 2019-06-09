@@ -30,11 +30,11 @@ class Reservation < ActiveRecord::Base
 
  def availability
   if (!checkin.nil? && !checkout.nil?)
-        listing.reservations.each do |res|
-          if (checkin <= res.checkout) && (checkout >= res.checkin)
-            errors.add(:checkin, "There is no availability for your dates")
-          end
+    listing.reservations.each do |res|
+      if (checkin <= res.checkout) && (checkout >= res.checkin)
+        errors.add(:checkin, "There is no availability for your dates")
         end
       end
     end
+  end
 end
